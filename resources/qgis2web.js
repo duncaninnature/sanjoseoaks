@@ -466,7 +466,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (298 > 240) {
+        if (343 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -480,13 +480,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'Shows the current inventory of oak trees San Jose streets, based on data published by the City of San Jose in March, 2025 (https://data.sanjoseca.gov/dataset/street-tree). <br /><br />Tree layers are grouped by "age," referencing demarcations in the 2022 San Jose Community Forest Management Plan (pg. 42).<br /><br />';
+                linkElement.innerHTML = 'Shows the current inventory of oak trees San Jose streets, based on data published by the City of San Jose in March, 2025 (https://data.sanjoseca.gov/dataset/street-tree). <br /><br />Tree layers are grouped by "age," referencing demarcations in the 2022 San Jose Community Forest Management Plan (pg. 42).<br /><br />by Duncan Keller - duncaninnature@gmail.com<br /><br />';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'Shows the current inventory of oak trees San Jose streets, based on data published by the City of San Jose in March, 2025 (https://data.sanjoseca.gov/dataset/street-tree). <br /><br />Tree layers are grouped by "age," referencing demarcations in the 2022 San Jose Community Forest Management Plan (pg. 42).<br /><br />';
+            linkElement.innerHTML = 'Shows the current inventory of oak trees San Jose streets, based on data published by the City of San Jose in March, 2025 (https://data.sanjoseca.gov/dataset/street-tree). <br /><br />Tree layers are grouped by "age," referencing demarcations in the 2022 San Jose Community Forest Management Plan (pg. 42).<br /><br />by Duncan Keller - duncaninnature@gmail.com<br /><br />';
         }
 
         titleElement.appendChild(linkElement);
