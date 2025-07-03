@@ -449,7 +449,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-right-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">San Jose Street Trees - Oaks by Age</h2>';
+        titleElement.innerHTML = '<h2 class="project-title">San Jose Street Trees Oaks</h2>';
         return titleElement;
     })(),
     target: 'top-right-container'
@@ -466,7 +466,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (343 > 240) {
+        if (568 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -480,13 +480,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'Shows the current inventory of oak trees San Jose streets, based on data published by the City of San Jose in March, 2025 (https://data.sanjoseca.gov/dataset/street-tree). <br /><br />Tree layers are grouped by "age," referencing demarcations in the 2022 San Jose Community Forest Management Plan (pg. 42).<br /><br />by Duncan Keller - duncaninnature@gmail.com<br /><br />';
+                linkElement.innerHTML = 'Shows the current inventory of oak trees in San Jose streets, based on data published by the City of San Jose in March, 2025. Tree layers are separated by category of DBH, a proxy for age group (see pg. 42 of the 2022 San Jose Community Forest Management Plan).<br /><br />by Duncan Keller - duncaninnature@gmail.com<br /><br />Tree layers from "Street Tree" data source - https://data.sanjoseca.gov/dataset/street-tree<br />Highway layers from "Streets" data source - https://data.sanjoseca.gov/dataset/streets<br />Basemap - "Positron (retina)," accessed through QuickMapServices plugin in QGIS<br /><br />';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'Shows the current inventory of oak trees San Jose streets, based on data published by the City of San Jose in March, 2025 (https://data.sanjoseca.gov/dataset/street-tree). <br /><br />Tree layers are grouped by "age," referencing demarcations in the 2022 San Jose Community Forest Management Plan (pg. 42).<br /><br />by Duncan Keller - duncaninnature@gmail.com<br /><br />';
+            linkElement.innerHTML = 'Shows the current inventory of oak trees in San Jose streets, based on data published by the City of San Jose in March, 2025. Tree layers are separated by category of DBH, a proxy for age group (see pg. 42 of the 2022 San Jose Community Forest Management Plan).<br /><br />by Duncan Keller - duncaninnature@gmail.com<br /><br />Tree layers from "Street Tree" data source - https://data.sanjoseca.gov/dataset/street-tree<br />Highway layers from "Streets" data source - https://data.sanjoseca.gov/dataset/streets<br />Basemap - "Positron (retina)," accessed through QuickMapServices plugin in QGIS<br /><br />';
         }
 
         titleElement.appendChild(linkElement);
@@ -599,11 +599,22 @@ document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 //layerswitcher
 
 var layerSwitcher = new ol.control.LayerSwitcher({
-    tipLabel: "Layers",
-    target: 'top-right-container'
-});
+    activationMode: 'click',
+	startActive: true,
+	tipLabel: "Layers",
+    target: 'top-right-container',
+	collapseLabel: '»',
+	collapseTipLabel: 'Close'
+    });
 map.addControl(layerSwitcher);
-    
+if (hasTouchScreen || isSmallScreen) {
+	document.addEventListener('DOMContentLoaded', function() {
+		setTimeout(function() {
+			layerSwitcher.hidePanel();
+		}, 500);
+	});	
+}
+
 
 
 
