@@ -35,7 +35,9 @@ var jsonSource_DBHUnknown_2 = new ol.source.Vector({
 jsonSource_DBHUnknown_2.addFeatures(features_DBHUnknown_2);
 var lyr_DBHUnknown_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_DBHUnknown_2, 
+                source:jsonSource_DBHUnknown_2,
+maxResolution:12.602009768517881,
+ 
                 style: style_DBHUnknown_2,
                 popuplayertitle: 'DBH Unknown',
                 interactive: true,
@@ -50,7 +52,9 @@ var jsonSource_DBH18Inches_3 = new ol.source.Vector({
 jsonSource_DBH18Inches_3.addFeatures(features_DBH18Inches_3);
 var lyr_DBH18Inches_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_DBH18Inches_3, 
+                source:jsonSource_DBH18Inches_3,
+maxResolution:12.602009768517881,
+ 
                 style: style_DBH18Inches_3,
                 popuplayertitle: 'DBH >18 Inches',
                 interactive: true,
@@ -65,7 +69,9 @@ var jsonSource_DBH6518inches_4 = new ol.source.Vector({
 jsonSource_DBH6518inches_4.addFeatures(features_DBH6518inches_4);
 var lyr_DBH6518inches_4 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_DBH6518inches_4, 
+                source:jsonSource_DBH6518inches_4,
+maxResolution:12.602009768517881,
+ 
                 style: style_DBH6518inches_4,
                 popuplayertitle: 'DBH 6.5-18 inches',
                 interactive: true,
@@ -80,7 +86,9 @@ var jsonSource_DBH06inches_5 = new ol.source.Vector({
 jsonSource_DBH06inches_5.addFeatures(features_DBH06inches_5);
 var lyr_DBH06inches_5 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_DBH06inches_5, 
+                source:jsonSource_DBH06inches_5,
+maxResolution:12.602009768517881,
+ 
                 style: style_DBH06inches_5,
                 popuplayertitle: 'DBH 0-6 inches',
                 interactive: true,
