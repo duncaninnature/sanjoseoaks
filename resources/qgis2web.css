@@ -409,25 +409,3 @@ td video {
 	padding-left: 8px !important;
 	list-style: none;	
 	}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#map {
-    height: 100vh;
-    width: 100vw;
-}
-
-@media screen and (max-width: 768px) {
-    .ol-control {
-        font-size: 0.8em;
-    }
-
-    .ol-control button {
-        padding: 6px;
-    }
-}
